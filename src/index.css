@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+
+  --color-ink: #14171c;
+  --color-ink-soft: #3d4450;
+  --color-muted: #6b7280;
+  --color-canvas: #f3f2ee;
+  --color-sidebar: #faf9f6;
+  --color-card: #ffffff;
+  --color-line: #e6e3db;
+  --color-line-strong: #d7d2c8;
+  --color-accent: #1f4e5f;
+  --color-accent-hover: #173d4b;
+  --color-accent-soft: #e7f0f3;
+  --color-warm: #c45c26;
+  --color-warm-soft: #f8eee6;
+  --color-memory: #6b5a3e;
+  --color-memory-soft: #f3eee4;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button,
+  input,
+  textarea {
+    font-family: inherit;
+  }
+}
+
+@utility card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(20, 23, 28, 0.04);
+}
+
+@utility page-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  font-weight: 500;
+}
